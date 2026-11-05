@@ -108,21 +108,21 @@
   De fato: $ V_0 = -20V $
 ]
 
-#exercise[Indicar como o balanço de potẽncia pode ser obtido.]
+#exercise[Indicar como o balanço de potência pode ser obtido.]
 
 #solution[
 
-  $P_(15V) = 15I = 15(15/33 + (15 - V_Delta) / 10) = 15(15/33 + 33/33) = 15(48/33) = 21,81 W$
+  $P_(15V) = 15I = 15(15/33 + (15 - V_Delta) / 10) = 15(15/33 + 33/33) = 15(48/33) = 21,81 W$\
   
-  $P_(5V_Delta) = 25I = 25(20/20 + 20/40) = 37,5W $
+  $P_(5V_Delta) = 25I = 25(20/20 + 20/40) = 37,5W $\
  
-  $P_(10Omega) = (15-5)^2 / 10 = -10W $
+  $P_(10Omega) = (15-5)^2 / 10 = -10W $\
   
-  $P_(33Omega) = 15^2/33 = -6,81W$
+  $P_(33Omega) = 15^2/33 = -6,81W$\
   
-  $P_(2Omega) = 5^2 / 2 = -12,5W$
+  $P_(2Omega) = 5^2 / 2 = -12,5W$\
   
-  $P_(20Omega) = 40^2 / 20 = -20W$
+  $P_(20Omega) = 40^2 / 20 = -20W$\
   
-  $P_(40Omega) = 40^2 / 40 = -10W$
+  $P_(40Omega) = 40^2 / 40 = -10W$\
 ]
