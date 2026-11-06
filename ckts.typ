@@ -1,6 +1,8 @@
 #import "@preview/zap:0.6.0"
 #import "src/template.typ": *
 
+#show: conf
+
 #set page(margin: 2cm, paper: "a4")
 #set text(font: "New Computer Modern", size: 10pt, lang: "pt", region: "br")
 #set par(justify: true)

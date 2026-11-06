@@ -1,5 +1,7 @@
 #import "src/template.typ": *
 
+#show: conf
+
 #set text(font: "New Computer Modern", size: 10pt, lang: "pt", region: "br")
 #set page(paper: "a4", margin: 0.5in)
 #set par(justify: true)
