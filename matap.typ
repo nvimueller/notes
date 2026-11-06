@@ -3,43 +3,48 @@
 #show: conf
 
 #set text(font: "New Computer Modern", size: 10pt, lang: "pt", region: "br")
-#set page(paper: "a4", margin: 0.5in)
+#set page(paper: "a4")
 #set par(justify: true)
 
 = Série de Fourier
 
 == Funções Periódicas
 
-#definition[$f$ é $T$-periódica se $f(t+T) = f(t)$ $forall t in RR$, $T > 0$.]
+#definition[
+
+  $f$ é $T$-periódica se $f(t + T) = f(t)$ $forall t in RR$, $T > 0$.]
+
+#theorem[Uma função $T$-periódica admite períodos múltiplos de $T$, pois $ f(t) = f(t + T) = f(t + 2T) = f(t + 3T) = f(t + n T) $]
 
 #example[$f(t) = sin(t)$ é $2pi$-periódica.]
 
 #example[$f(t) = 1$ é periódica (admite qualquer número positivo como período).]
 
-#definition[Uma função T-periódica admite períodos T, 2T, 3T, 4T, ..., pois $ f(t) = f(t+T) = f(t+2T) = f(t+3T) $]
+#definition[
+- O menor período $T > 0$ é o período fundamental.
+- A frequência fundamental é $f = 1/T$.
+- A frequência angular fundamental é $w = (2pi)/T$.
+]
 
-*Definição:*
+#example[
 
-+ O menor período $T > 0$ é o período fundamental.
-+ A frequência fundamental é $f = 1/T$.
-+ A frequência angular fundamental é $w = 2pi/T$.
+  $2pi$ é o período fundamental de $sin(t)$ e $w = 1$ é a frequência angular fundamental. De fato, $pi$ não é período de $sin(t)$, pois $sin(pi/2) != sin(pi/2 + pi) = -1$]
 
-*Exemplo:*
+#example[$f(t) = 1$ não possui período fundamental.]
 
-$2pi$ é o período fundamental de $sin(t)$ e $w = 1$ é a frequência angular fundamental. De fato, $pi$ não é período de $sin(t)$, pois $sin(pi/2) |= sin(pi/2 + pi) = -1$
+#example[
+  
+  $sin(w t) = sin(w(t + T))$
 
-$f(t) = 1$ não possui período fundamental.
+  Em especial, se $t = 0$, temos $sin(w T) = sin(0) = 0 => w T = n pi$, $n > 0$
+  
+  Então, $T = n pi / w$
+]
 
-$sin(w t) = $
-
-O período satisfaz $ sin(w t) = sin(w(t+T)) $\
-Em especial, se $t = 0$, temos $sin(w T) = sin(0) = 0$\
-$ => w T = n\pi, n > 0$\
-$ T = n\pi / w $
 
 Candidatos a período são $pi/w$, $2pi/w$, $3pi/w$, ...
 
-Observe que $pi/w$ não é período, pois se $t = pi/2w$, temos $ sin(w pi/2w)) |= sin(w(pi/2w + pi/w)) = -1 $
+Observe que $pi/w$ não é período, pois se $t = pi/2w$, temos $ sin(w pi/2w)) != sin(w(pi/2w + pi/w)) = -1 $
 
 Também observe que $ sin(w t) = sin(w(t + 2pi/w))$
 $ = sin(w t)cos(2pi) + sin(2pi)cos(w t) $

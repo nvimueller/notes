@@ -41,11 +41,11 @@
   [
     #if numbered [#thm-counter.step()]
     #text(weight: "bold", fill: base-color.darken(10%))[
-      #kind #if numbered [#context {
+      #kind#if numbered [ #context {
         let h1 = counter(heading).get().at(0, default: 0)
         let thm-num = thm-counter.get().first()
         if h1 > 0 [#(str(h1) + "." + str(thm-num))] else [#thm-num]
-      }] #if title != "" [ (#title)].
+      }]#if title != "" [ (#title)].
     ]
     #h(0.4em)
     #body
