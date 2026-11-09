@@ -71,7 +71,7 @@
 #theorem[Se $f$ é $T$-periódica e integrável, então $integral_x^(x+T) f(t) dif t = integral_0^T f(t) dif t$.]
 
 #proof[
-  Seja $I(x) = integral_x^(x+T) f(t) dif t$. Derivando, temos $I'(x) = f(x+T) - f(x)$ pela Regra de Leibniz. Como $f(x)$ é $T$-periódica, então $f(x+T) = f(x)$. Com isso temos que $I'(x) = 0$. Se a derivada de uma função é $0$ em todos os pontos, quer dizer que $I(x)$ é uma constante. Logo, como o valor da integral é o mesmo independentemente do valor de $x$, podemos escolher um valor conveniente $x = 0$. Portanto, $I(x) = I(0) = integral_0^T f(t) dif t$.
+  Seja $I(x) = integral_x^(x+T) f(t) dif t$. Derivando, temos $I'(x) = f(x+T) - f(x)$ pela Regra de Leibniz. Como $f(x)$ é $T$-periódica, então $f(x+T) = f(x)$. Com isso temos que $I'(x) = 0$. Se a derivada de uma função é zero em todos os pontos, quer dizer que $I(x)$ é uma constante. Logo, como o valor da integral é o mesmo independentemente do valor de $x$, podemos escolher um valor conveniente $x = 0$. Portanto, $I(x) = I(0) = integral_0^T f(t) dif t$.
 ]
 
 == Polinômio Trigonométrico
