@@ -13,10 +13,10 @@
   #zap.circuit({
     import zap: *
 
-    vsource("source", (0, 0), (0, 3), label: (content: $15 "V"$, anchor: "north"), polarity: true, variant: "ieee")
+    vsource("source", (0, 0), (0, 3), label: (content: $15 thin "V"$, anchor: "north"), polarity: true, variant: "ieee")
     vsource("dependent", (6, 3), (4, 3), label: (content: $5 V_Delta$, anchor: "south"), polarity: true, variant: "ieee", dependent: true)
 
-    resistor("r1", (2, 3), (2, 0), label: $33 Omega$, variant: "ieee")
+    resistor("r1", (2, 3), (2, 0), label: (content: $33 Omega$, distance: 2pt), variant: "ieee")
     resistor("r2", (2, 3), (4, 3), label: $10 Omega$, variant: "ieee")
     resistor("r3", (4, 3), (4, 0), label: $2 Omega$, u: (content: $V_Delta$, anchor: "south", label-distance: 8pt, distance: 6pt), variant: "ieee")
     resistor("r4", (6, 3), (6, 0), label: $20 Omega$, variant: "ieee")
