@@ -120,7 +120,7 @@
 
 #definition[Uma função $f(t)$ é denominada ímpar se $f(t) = -f(t)$.]
 
-#remark[$cos(a - b) = cos(a)cos(b) + sin(a)sin(b)$.]
+#remark[$cos(a - b) = cos(a)cos(b) + sin(b)sin(a)$.]
 
 == Forma Harmônica
 
@@ -141,3 +141,73 @@
 ]
 
 #exercise[Converta a onda dente de serra para a forma harmônica.]
+
+DATA: 11/11
+
+#remark[Já vimos até agora:
+  $f(t) = a_0 / 2 + sum_(n=1)^infinity a_n cos(omega_n t) + b_n sin(omega_n t)$, onde $omega_n = (2pi n) / T$.
+  - $omega_n = (2pi n) / T$
+  - $a_0 = 2 / T integral_0^T f(t) dif t$.
+  - $a_n = 2 / T integral_0^T f(t) cos(omega_n t) dif t$, para $n >= 1$.
+  - $b_n = 2 / T integral_0^T f(t) sin(omega_n t) dif t$, para $n >= 1$.
+  $f(t) = A_0 + sum_(n = 1)^infinity A_n cos(omega_n t - phi_n)$.
+  - $A_0 = a_0 / 2$
+  - $a_n = A_n cos(phi_n)$
+  - $b_n = A_n sin(phi_n)$
+  - $A_n = sqrt(a_n^2 + b_n^2)$
+  #v(0.3em)
+  - $cases(cos(phi_n) = a_n / A_n, sin(phi_n) = b_n / A_n)$
+]
+
+= Forma Exponencial
+
+#definition[
+  $f(t) = a_0 / 2 + sum_(n=1)^infinity a_n (e^(i omega_n t) + e^(-i omega_n t)) / 2 + b_n (e^(i omega_n t) - e^(-i omega_n t)) / 2i$.
+  $f(t) = a_0 / 2 + sum_(n=1)^infinity ((a_n - i b_n) / 2) e^(i omega_n t) + ((a_n + i b_n) / 2) e^(-i omega_n t)$.
+  $f(t) = a_0 / 2 + sum_(n=1)^infinity ((a_n - i b_n) / 2) e^(i omega_n t) + sum_(n = 1)^infinity ((a_n + i b_n) / 2) e^(-i omega_n t)$.
+  $f(t) = a_0 / 2 + sum_(n=1)^infinity ((a_n - i b_n) / 2) e^(i omega_n t) + sum_(n = -1)^(-infinity) ((a_(-n) + b_(-n)) / 2) e^(-i omega_(-n) t)$.
+]
+
+= Extensões dos Coeficientes
+
+$omega_n = (2pi n) / T => omega_(-n) = (2pi / T)(-n) = (-2pi n) / T = -omega_n$, $n >= 0$.
+$omega_n = 0$
+$a_(-n) = 2 / T integral_0^T f(t) cos(omega_(-n) t) dif t = 2 / T integral_0^T f(t) cos(-omega_n t) dif t = a_n$, $n >= 1$.
+$b_n = 2 / T integral_0^T f(t) sin(omega_(-n) t) dif t = 2 / T integral_0^T f(t) sin(-omega_n t) dif t = -b_n$, $n >= 1$
+$b_0 = 0$.
+Temos:
+$f(t) = a_0 / 2 + sum_(n=1)^infinity ((a_n - i b_n) / 2) e^(i omega_n t) + sum_(n = -1)^(-infinity) ((a_n - i b_n) / 2) e^(i omega_n t)$.
+$f(t) = ((a_0 - i b_0) / 2) e^(i omega_0 t) + sum_(n=1)^infinity ((a_n - i b_n) / 2) e^(i omega_n t) + sum_(n = -1)^(-infinity) ((a_n - i b_n) / 2) e^(i omega_n t)$.
+$f(t) = sum_(-infinity)^(infinity) C_n e^(i omega_n t)$, onde $C_n = (a_n - i b_n) / 2$.
+$C_n = (a_n - i b_n) / 2 = (1 / 2) (2 / T integral_0^T f(t) cos(omega_n t) dif t - (2i) / T integral_0^T f(t) sin(omega_n t) dif t)$
+$C_n = 1 / T integral_0^T f(t) e^(-i omega_n t) dif t$
+$overline(C_n) = C_(-n)$
+
+
+= Diagramas de Espectro
+
+Escrevemos $C_n = |C_n| e^(i phi n)$.
+
++ O gráfico discreto de $|C_n|$ em termos de $omega_n$ é o diagrama de espectro de amplitudes.
++ O gráfico discreto de $phi_n$ em termos de $omega_n$ é o diagrama de espectro de fases.
+
+*Gráficos não anotados do quadro - deve ter no REAMAT* (Foto 1)
+
+#example[
+  *Gráfico da função* (Foto 2)
+  $T = 4, omega_n = (pi / 2)n$.
+  $f(t)$ não é par nem ímpar.
+  $a_0 = 2 / 4 integral_0^4 f(t) dif t = 1 / 2$.
+  $a_n = sin((pi n) / 2) / (pi n) = cases(0 "se" n "par", ((-1)^((n - 1) / 2)) / (2pi) "se" n "ímpar")$.
+  $b_n = (1 - cos((pi / 2)n)) / (pi n) = cases(1 / (pi n) "se" n "ímpar", (1 - (-1)^(n / 2)) / (pi n), "se" n "par")$.
+  $A_0 = 1 / 4$.
+  $cases(cos(Delta_1) = sqrt(2) / 2, sin(Delta_1) = sqrt(2) / 2) => Delta_1 = pi / 4$.
+  $Delta_2 = pi / 2$.
+  $C_0 = (a_0 - i b_0) / 2 = 1 / 4$.
+  $C_1 = (1 - i) / 2pi$.
+  $C_2 = -i / 2pi$...
+  
+  *Foto da tabela*
+]
+
+#remark[Saber resolver módulo e fase de números complexos.]
