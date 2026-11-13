@@ -211,3 +211,9 @@ Escrevemos $C_n = |C_n| e^(i phi n)$.
 ]
 
 #remark[Saber resolver módulo e fase de números complexos.]
+
+#exercise[$f(t) = sin(t) + cos(t) + sin(2t)$]
+
+#remark[Conjugado troca somente sinal da parte imaginária.]
+
+#remark[Prova pode pedir qual é a série dados os diagramas de espectro de fases e de amplitudes. Isso dá a forma exponencial da série, que posteriormente pode ser convertida para as outras formar se necessário.]
