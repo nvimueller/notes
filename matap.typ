@@ -217,3 +217,43 @@ Escrevemos $C_n = |C_n| e^(i phi n)$.
 #remark[Conjugado troca somente sinal da parte imaginária.]
 
 #remark[Prova pode pedir qual é a série dados os diagramas de espectro de fases e de amplitudes. Isso dá a forma exponencial da série, que posteriormente pode ser convertida para as outras formar se necessário.]
+
+DATA 16/11
+
+#remark[Se uma função é periódica, então ela ter Série de Fourier.]
+
+= Passagem do discreto para o contínuo
+
+Seja $f(t)$ uma função não periódica e defina $cases((f_T (t) = f(t), -T/2 < t < T/2), (f_T (t + T) = f_T(t), foral t in RR))$.
+
+#example[
+  $f(t) = e^(-|t|)$.
+  Definimos $cases((f_T (t) = e^(-|t|), -T / 2 < t < T / 2), (f_T (t + T) = f_T(t), foral t in RR))$.
+  Observe que o limite com $lim_(T -> infinity) f_T(t) = f(t)$.
+  $f_T(t) = sum_(n = -infinity)^infinity C_n e^(i w_n t), w_n = (2pi)n / T, C_n = (a_n - i b_n) / 2$.
+  $a_0 = (4 / T) (1 - e^(-T/2))$.
+  $a_n = (4 / T) ((w_n sin(pi n) - cos(pi n)) e^(-T/2) + 1) / ((w_n)^2 + 1) = (4 / T) (1 - (-1)^n e^(-T/2)) / (w_n)^2 + 1$.
+  $b_n = 0$.
+  $C_0 = (2 / T) (1 - e^(-T/2)$ e $C_n = (2/T) ((1 - (-1)^n e^(-T/2)) / ((w_n)^2 + 1)$.
+  Aqui, $|C_n| = C_n$ e $phi_n = 0$.
+  
+  De modo geral, $f_T(t) = sum_(-infinity)^infinity C_n e^(i w_n t), w_n = (2pi n) / T$.
+  onde $C_n = 1 / T integral_(-T/2)^(T/2) f_T(t) e^(-i w_n t) dif t$.
+  Definimos: $F_T(w) = integral_(-T/2)^(T/2) f_T(t) e^(-i w_n t) dif t$.
+  Então, $f_T(t) = 1 / T sum_(-infinity)^infinity F_T(w_n) e^(i w_n t)$.
+  Então, $= 1 / 2pi sum_(-infinity)^infinity F_T(w_n) e^(i w_n t) w_1$.
+  Onde $T = 2pi / w_1 => 1 / T = w_1 / 2pi$.
+  Temos $F_T(w) = integral_(-T/2)^(T/2) f(t) e^(-i w_n t) dif t$ e $f_T(t) = 1 / 2pi sum_(n = -infinity)^(infinity) F_T(w_n) e^(i w_n t) Delta w$.
+  Fazendo $T -> infinity$, temos,
+  $F(w) = integral_(-infinity)^infinity f(t) e^(-i w_n t) dif t$ e $f(t) = 1 / 2pi integral_(-infinity)^infinity F(w) e^(i w_n t) dif w$.
+  Onde $F(w)$ é a transformada de Fourier e $f(t)$ é a transformada inversa de Fourier.
+  Podemos escrever $F(w) = |F(w)| e^(i phi(w))$.
+  Os gráficos de $|F(w)|$ e $phi(w)$ são os diagramas de espectro de magnitudes e fase.
+
+]
+
+#example[Calcule a transformada de Fourier de $f(t) = e^(-|t|)$.
+  $F(w) = integral_(-infinity)^infinity e^(-|t|) e^(-i w t) dif t$.
+
+
+]
