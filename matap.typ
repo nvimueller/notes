@@ -254,6 +254,38 @@ Seja $f(t)$ uma função não periódica e defina $cases((f_T (t) = f(t), -T/2 <
 
 #example[Calcule a transformada de Fourier de $f(t) = e^(-|t|)$.
   $F(w) = integral_(-infinity)^infinity e^(-|t|) e^(-i w t) dif t$.
-
-
 ]
+
+DATA 23/11
+
+$C_n = 1 / T integral_(-T / 2)^(T / 2) f(t) e^(-i omega_n t) dif t$
+
+= Transformada de Fourier
+
+$F(omega) = integral_(-infinity)^infinity f(t) e^(-i omega t) dif t$
+
+= Transformada Inversa de Fourier
+
+$f(t) = 1 / (2pi) integral_(-infinity)^infinity F(omega) e^(i omega t) dif w$
+
+*Diagram de Espectro* -- $F(omega) = |F(w)| e^(i phi(omega))$
+
+$ |F(omega)| -> "magnitudes" $
+$ phi(omega) -> "fases" $
+
+*Exemplo.* Calcule $F{e^(-|t|)}$.
+
+*Solução.* $ F{e^(-|t|)} = integral_(-infinity)^infinity e^(-|t|) times e^(i omega t) dif t $
+$ F{e^(-|t|)} = integral_(-infinity)^infinity e^(-|t|) times (cos(omega t) - i sin(omega t)) dif t $
+$ F{e^(-|t|)} = integral_(-infinity)^infinity e^(-|t|) (cos(omega t) - i integral_(-infinity)^infinity e^(-|t|) sin(omega t)) dif t $
+
+$ 2 integral_0^infinity e^(-t) cos(omega t) dif t -> "integral 1 do formulário"$
+$ 2 times (1 / (1^2 + omega^2)) = 2 / (omega^2 + 1) $
+
+= Propriedades
+
+== Linearidade
+A transformada da soma é a soma das transformadas.
+
+== Transformada da Derivada
+Se a transformada de Fourier existe e $lim_(t -> \pm infinity) f(t) = 0$. Então a transformada da derivada é $i omega F(omega)$.
