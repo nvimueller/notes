@@ -289,3 +289,17 @@ A transformada da soma é a soma das transformadas.
 
 == Transformada da Derivada
 Se a transformada de Fourier existe e $lim_(t -> \pm infinity) f(t) = 0$. Então a transformada da derivada é $i omega F(omega)$.
+
+*Observação.* A transformada da derivada segunda de uma função é $-omega^2 F(omega)$. De modo geral, $(i omega)^n F(omega)$.
+
+DATA 25/11
+
+== Deslocamento no eixo $omega$
+
+== Deslocamento no eixo $t$
+
+== Transformada da integral
+
+== Teorema da Modulação
+
+
