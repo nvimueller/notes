@@ -302,4 +302,14 @@ DATA 25/11
 
 == Teorema da Modulação
 
+*DATA 27/11*
 
+== Teorema da Convolução
+
+== Torema da Conjugação
+
+== Inversão Temporal
+
+== Simetria (ou Dualidade)
+
+== Mudança de escala
